@@ -1,0 +1,3 @@
+rofi.modi: window,drun
+rofi.theme: nord
+rofi.font: Roboto Condensed 16
