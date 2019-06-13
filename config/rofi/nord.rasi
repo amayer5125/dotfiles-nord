@@ -90,8 +90,6 @@
     text-color: @nord4;
 }
 #scrollbar {
-    border: 0px 0px 0px 1px;
-    border-color: @nord3;
     handle-color: @nord3;
     handle-width: 0.50em;
 }
