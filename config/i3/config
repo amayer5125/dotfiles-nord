@@ -127,7 +127,7 @@ bindsym $mod+i resize grow height 10 px or 10 ppt
 bindsym $mod+o resize shrink height 10 px or 10 ppt
 bindsym $mod+p resize grow width 10 px or 10 ppt
 
-# styling colors
+# color aliases
 set $bg-color            #2e3440
 set $text-color          #d8dee9
 set $bg-color-selected   #88c0d0
