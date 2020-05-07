@@ -182,6 +182,6 @@ exec --no-startup-id dunst
 # status bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # thumb drive auto mounter
-exec --no-startup-id udiskie -2
+exec --no-startup-id udiskie
 # screenshot utility
 exec --no-startup-id flameshot
