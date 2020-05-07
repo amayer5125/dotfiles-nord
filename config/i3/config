@@ -174,7 +174,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
 ### STARTUP APPLICATIONS ###
 # enable compositor
-exec --no-startup-id compton -bC
+exec --no-startup-id picom -bC
 # desktop background
 exec_always --no-startup-id feh --no-fehbg --bg-scale "$HOME/Pictures/wallpapers/lagoon_at_sunset.jpg"
 # notification system
