@@ -43,8 +43,6 @@ secondary = ${self.nord7}
 alert = ${self.nord11}
 
 [bar/status]
-monitor = eDP1
-
 width = 100%
 height = 35
 
