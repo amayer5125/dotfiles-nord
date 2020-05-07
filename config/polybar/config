@@ -63,7 +63,7 @@ font-1 = "Font Awesome 5 Free Solid:pixelsize=16;0"
 
 modules-left = i3
 modules-center =
-modules-right = wireless-network cpu alsa battery date
+modules-right = wireless-network cpu volume battery date
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
@@ -133,8 +133,8 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.nord12}
 label = %percentage:2%%
 
-[module/alsa]
-type = internal/alsa
+[module/volume]
+type = internal/pulseaudio
 
 format-volume-prefix = " "
 format-volume-prefix-foreground = ${colors.foreground-alt}
