@@ -2,6 +2,8 @@
 
 My theme based off of [Nord Theme](https://www.nordtheme.com/) from [Arctic Ice Studio](https://github.com/arcticicestudio/).
 
+Check out some [screenshots](https://imgur.com/gallery/Fvzelmm).
+
 ## Upstream Themes
 
 I used all the upstream themes I could find from [Arctic Ice Studio](https://github.com/arcticicestudio/).
