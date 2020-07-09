@@ -11,4 +11,4 @@ I used all the upstream themes I could find from [Arctic Ice Studio](https://git
 - dunst
 - i3
 - polybar
-- rofi
+- [rofi](https://github.com/amayer5125/nord-rofi)
