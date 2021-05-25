@@ -13,13 +13,13 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Roboto Condensed 16
+font pango:Roboto Condensed 13
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -127,11 +127,11 @@ bindsym $mod+i resize grow height 10 px or 10 ppt
 bindsym $mod+o resize shrink height 10 px or 10 ppt
 bindsym $mod+p resize grow width 10 px or 10 ppt
 
-# color aliases
+# bar styling
 set $bg-color            #2e3440
 set $text-color          #d8dee9
 set $bg-color-selected   #88c0d0
-set $text-color-selected #d8dee9
+set $text-color-selected #2e3440
 set $bg-color-urgent     #bf616a
 set $indicator-color     #88c0d0
 
@@ -164,9 +164,10 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 # Volume controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 5%+ unmute
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 5%- unmute
-bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl set-sink-mute @DEFAULT_SINK@ 0
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl set-sink-mute @DEFAULT_SINK@ 0
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Screen Brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
@@ -174,11 +175,13 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
 
 ### STARTUP APPLICATIONS ###
 # enable compositor
-exec --no-startup-id picom -bC
+exec --no-startup-id picom
 # desktop background
-exec_always --no-startup-id feh --no-fehbg --bg-scale "$HOME/Pictures/wallpapers/lagoon_at_sunset.jpg"
+exec_always --no-startup-id feh --no-fehbg --bg-scale "$HOME/Pictures/wallpapers/rainbow.png"
 # notification system
 exec --no-startup-id dunst
+bindsym ctrl+space exec --no-startup-id dunstctl close
+bindsym ctrl+grave exec --no-startup-id dunstctl history-pop
 # status bar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # thumb drive auto mounter
